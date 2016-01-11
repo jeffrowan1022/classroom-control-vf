@@ -67,9 +67,8 @@ exec { "cowsay 'Welcome to ${::hostname}!' > /etc/motd":
   }
 
 
-host { 'bestIP.testing.puppetlabs.vm':
+host { 'testing.puppetlabs.vm':
  ensure  => present,
- ip      => '10.10.10.01',
+ ip      => '127.0.0.1',
  }
- 
 }
