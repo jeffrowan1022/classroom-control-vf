@@ -59,7 +59,7 @@ node default {
   # }
 #}
 
-exec { "cowsay "Welcome to ${::hostname}!' > /etc/motd":
+exec { "cowsay 'Welcome to ${::hostname}!' > /etc/motd":
   path    => '/usr/bin:/usr/local/bin',
   creates => '/etc/motd',
   }
