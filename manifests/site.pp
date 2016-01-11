@@ -57,5 +57,4 @@ node default {
     mode    => '0644',
     content => "Making changes to a file! \n",
     }
-    }
 }
