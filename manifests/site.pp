@@ -61,14 +61,15 @@ node default {
 
  notify { "My fqdn is ${::fqdn}": }
 
-#exec { "cowsay 'Welcome to ${::hostname}!' > /etc/motd":
-#  path    => '/usr/bin:/usr/local/bin',
-#  creates => '/etc/motd',
-#  }
-#}
+exec { "cowsay 'Welcome to ${::hostname}!' > /etc/motd":
+  path    => '/usr/bin:/usr/local/bin',
+  creates => '/etc/motd',
+  }
 
-host { 'bestIP.testing.com':
+
+host { 'bestIP.testing.puppetlabs.vm':
  ensure  => present,
  ip      => '10.10.10.01',
  }
+ 
 }
