@@ -1,5 +1,6 @@
 class users::admins {
-  users::managed_users { ['joe', 'alice', 'chen']:
+  $users = ['jose', 'alice', 'chen']
+  users::managed_users { $users:
     group  => 'co-ops',
   }
   group { 'co-ops':
