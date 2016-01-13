@@ -52,7 +52,7 @@ node default {
   
   if $::virtual != 'physical' {
     $capVMname = capitalize($::virtual)
-    notify { "This is a ${capVMName} virtual machine.": }
+    notify { "This is a ${capVMname} virtual machine.": }
   }
   
  # file { '/etc/motd':
