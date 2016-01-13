@@ -9,7 +9,7 @@ class nginx {
     mode    => '0664',
   }
   
-  file { ['/var/www', '/etc/nginx/conf.d' ]
+  file { [ '/var/www', '/etc/nginx/conf.d' ]:
     ensure  => directory,
   }
   
