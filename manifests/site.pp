@@ -50,7 +50,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
-  if $::virtual != 'physical {
+  if $::virtual != 'physical' {
     $capVMname = capitalize($::virtual)
     notify { "This is a ${capVMName} virtual machine.": }
   
