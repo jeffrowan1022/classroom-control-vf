@@ -50,9 +50,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
-  include nginx
-  
-  $message = hiera('message')
+ $message = hiera('message')
   notify { $message: }
   
     class { 'nginx':
