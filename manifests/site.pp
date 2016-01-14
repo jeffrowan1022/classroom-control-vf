@@ -50,6 +50,9 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
+  $message = hiera('message')
+  notify { $message: }
+  
   if $::virtual != 'physical' {
     $capVMname = capitalize($::virtual)
     notify { "This is a ${capVMname} virtual machine.": }
