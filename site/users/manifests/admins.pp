@@ -1,10 +1,10 @@
 class users::admins {
-  group { 'co-ops':
+  group { 'staff':
     ensure  => present,
   }
-  $users = ['jose', 'alice', 'chen']
+  $users = 'jose',
   users::managed_user { $users:
-    group  => 'co-ops',
+    group  => 'staff',
   }
  
 }
