@@ -7,3 +7,7 @@ mod 'vcsrepo',
 
 # Installs the puppetlabs/vsphere module from the Puppet Forge
 mod 'puppetlabs/vsphere', '1.2.0'
+
+# Installs the puppetlabs/vsphere module from the Puppet Forge
+mod 'puppetlabs/tomcat', '1.4.1'
+
