@@ -54,7 +54,7 @@ node default {
   notify { $message: }
   
     class { 'nginx':
-        root => '/var/ww/html',
+        root => '/var/www/html',
     }
   
   if $::virtual != 'physical' {
