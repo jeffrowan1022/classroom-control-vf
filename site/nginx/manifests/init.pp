@@ -54,6 +54,10 @@ file { [ $docroot, "${confdir}/conf.d" ]:
   ensure => directory,
 }
 
+file { '/var/www':
+ ensure  => directory,
+}
+
 file { "${docroot}/index.html":
   ensure => file,
   source => 'puppet:///modules/nginx/index.html',
