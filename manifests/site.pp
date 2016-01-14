@@ -53,6 +53,10 @@ node default {
   $message = hiera('message')
   notify { $message: }
   
+    class { 'nginx':
+        root => '/var/ww/html',
+    }
+  
   if $::virtual != 'physical' {
     $capVMname = capitalize($::virtual)
     notify { "This is a ${capVMname} virtual machine.": }
