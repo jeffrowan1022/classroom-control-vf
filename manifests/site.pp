@@ -50,6 +50,8 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
+  include wrappers::vsphere
+  
  $message = hiera('message')
   notify { $message: }
   
